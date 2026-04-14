@@ -1,0 +1,4 @@
+Entertelethon
+requests
+aiohttp
+aiofiles
