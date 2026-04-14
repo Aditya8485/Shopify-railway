@@ -1,17 +1,18 @@
 from telethon import TelegramClient, events, Button
 from telethon.tl.types import KeyboardButtonCallback
-import requests, random, datetime, json, os, re, asyncio, time
+
+import os
+import requests, random, datetime, json, re, asyncio, time
 import string
 import hashlib
 import aiohttp
 import aiofiles
 from urllib.parse import urlparse
 
-
 # Config
-API_ID = 37651731
-API_HASH = "146c6196a7ea538655793a3c63204bc4"
-BOT_TOKEN = "8705949712:AAGSCQmJXAvsj9v8QFUVfb3z0YJiRppDNnk" # Replace with your Bot Token
+API_ID = int(os.getenv("API_ID", "0"))
+API_HASH = os.getenv("API_HASH", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "") # Replace with your Bot Token
 ADMIN_ID = [7664817967, 7371996527, 5506620312] # Replace with your Admin ID(s)
 GROUP_ID = -1003633514962 # Replace with your Group ID
 
